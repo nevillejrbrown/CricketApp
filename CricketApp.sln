@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CricketApp", "CricketApp.csproj", "{3D4F5986-2D02-488E-A539-E4D8242C84E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D4F5986-2D02-488E-A539-E4D8242C84E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D4F5986-2D02-488E-A539-E4D8242C84E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D4F5986-2D02-488E-A539-E4D8242C84E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D4F5986-2D02-488E-A539-E4D8242C84E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF7FF64E-CD15-47E6-BC89-C6BF26E6A585}
+	EndGlobalSection
+EndGlobal
