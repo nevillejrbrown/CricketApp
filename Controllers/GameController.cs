@@ -26,6 +26,16 @@ namespace CricketApp.Controllers
             "Length ball", "Half volley", "Bouncer!", "Yorker", "Short ball", "Cutter", "Wide"
         };
 
+        private static readonly String[] Umpires = new[]
+        {
+            "Darmesena", "Bucknor", "Illingworth"
+        };
+
+        private static readonly String[] Grounds = new[]
+{
+            "The Oval", "The County Ground", "Lords"
+        };
+
         private readonly ILogger<GameController> _logger;
 
         public GameController(ILogger<GameController> logger)
@@ -70,6 +80,18 @@ namespace CricketApp.Controllers
             return Ok(shotSleepWas);
         }
 
+        [HttpGet]
+        [Route("matchDetails")]
+        public IActionResult MatchDetails()
+        {
+            var rng = new Random();
+            return Ok(new MatchDetails()
+            {
+                umpire = Umpires[rng.Next(Umpires.Length)],
+                ground = Grounds[rng.Next(Grounds.Length)]
+            });
+        }
+
     }
 
     class Shot
@@ -77,5 +99,12 @@ namespace CricketApp.Controllers
         public String shot { get; set; }
 
         public int score { get; set; }
+    }
+
+    class MatchDetails
+    {
+        public String umpire { get; set; }
+        public String ground { get; set; }
+
     }
 }
