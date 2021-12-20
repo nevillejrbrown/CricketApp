@@ -61,14 +61,17 @@ namespace CricketApp.Controllers
 
         [HttpGet]
         [Route("shot")]
-        public IActionResult Shot()
+        public IActionResult Shot(string umpire = "Unknown" )
         {
             Thread.Sleep(shotSleep);
             shotSleep += 5;
             var rng = new Random();
+            int thisScore = Scores[rng.Next(Scores.Length)];
             return Ok(new Shot() { 
                 shot = Shots[rng.Next(Shots.Length)],
-                score = Scores[rng.Next(Scores.Length)] } );
+                score = thisScore,
+                message = "Umpire " + umpire + " indicates that " + thisScore + " has been scored"
+                } );
         }
 
         [HttpGet]
@@ -96,9 +99,11 @@ namespace CricketApp.Controllers
 
     class Shot
     {
-        public String shot { get; set; }
+        public string shot { get; set; }
 
         public int score { get; set; }
+
+        public string message { get; set; }
     }
 
     class MatchDetails
