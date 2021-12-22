@@ -70,7 +70,7 @@ namespace CricketApp.Controllers
             return Ok(new Shot() { 
                 shot = Shots[rng.Next(Shots.Length)],
                 score = thisScore,
-                message = "Umpire " + umpire + " indicates that " + thisScore + " has been scored"
+                message = $"Umpire {umpire} indicates that {thisScore} has been scored"
                 } );
         }
 
